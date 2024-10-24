@@ -1,7 +1,7 @@
 package main
 
 import (
-	"inventory-app/handlers" // Update this with the correct import path for your project
+	"inventory-app/handlers"
 	"net/http"
 )
 

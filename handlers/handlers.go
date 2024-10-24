@@ -2,9 +2,9 @@ package handlers
 
 import (
 	"html/template"
-	"inventory-app/models" // Update with your actual module path
+	"inventory-app/models"
 	"net/http"
-	"strconv" // Import strconv for type conversion
+	"strconv"
 )
 
 // HomeHandler serves the home page.
