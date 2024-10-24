@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>View Products</title>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-5">
+        <h1 class="text-2xl font-bold mb-4">Products</h1>
+        <a href="/add" class="bg-green-500 text-white p-2 rounded">Add New Product</a>
+        <table class="min-w-full bg-white border border-gray-300 mt-4">
+            <thead>
+                <tr>
+                    <th class="border px-4 py-2">ID</th>
+                    <th class="border px-4 py-2">Name</th>
+                    <th class="border px-4 py-2">Category</th>
+                    <th class="border px-4 py-2">Quantity</th>
+                    <th class="border px-4 py-2">Unit Price</th>
+                    <th class="border px-4 py-2">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range .}}
+                <tr>
+                    <td class="border px-4 py-2">{{.ID}}</td>
+                    <td class="border px-4 py-2">{{.Name}}</td>
+                    <td class="border px-4 py-2">{{.Category}}</td>
+                    <td class="border px-4 py-2">{{.Quantity}}</td>
+                    <td class="border px-4 py-2">{{.UnitPrice}}</td>
+                    <td class="border px-4 py-2">
+                        <a href="/update?id={{.ID}}" class="text-blue-500">Edit</a>
+                    </td>
+                </tr>
+                {{end}}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
